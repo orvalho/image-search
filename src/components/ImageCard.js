@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class ImageCard extends React.Component {
   constructor(props) {
@@ -8,6 +9,15 @@ export default class ImageCard extends React.Component {
       spans: 0
     };
   }
+
+  static propTypes = {
+    image: PropTypes.shape({
+      urls: PropTypes.shape({
+        regular: PropTypes.string.isRequired
+      }).isRequired,
+      description: PropTypes.string
+    }).isRequired
+  };
 
   setSpans = () => {
     const height = this.imgRef.current.clientHeight;

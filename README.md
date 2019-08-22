@@ -1,6 +1,6 @@
 ## Image search app
 
-Practicing how to make API requests with React. <br>
+Practicing how to make API requests with React and perform typechecking with PropTypes. <br>
 This app allows to perform image search and displays found images in a responsive gallery.
 
 ![app](public/img/app.png)
@@ -8,5 +8,6 @@ This app allows to perform image search and displays found images in a responsiv
 #### Stack
 
 -   React
+-   PropTypes
 -   Axios
 -   Unsplash API

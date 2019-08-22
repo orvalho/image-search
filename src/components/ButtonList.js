@@ -1,8 +1,9 @@
 import './ButtonList.css';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default({onClick}) => {
+const ButtonList = ({onClick}) => {
   const terms = [
     "plants",
     "dogs",
@@ -26,3 +27,9 @@ export default({onClick}) => {
   const buttons = terms.map(term => <Button key={term} onClick={onClick} searchTerm={term}/>);
   return <div className="buttons">{buttons}</div>;
 };
+
+ButtonList.propTypes = {
+  onClick: PropTypes.func.isRequired
+};
+
+export default ButtonList;

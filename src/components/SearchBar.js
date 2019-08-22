@@ -1,10 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class SearchBar extends React.Component {
   state = {
     term: ''
   };
 
+  static propTypes = {
+    onSearchSubmit: PropTypes.func.isRequired
+  };
+  
   onInputChange = e => this.setState({term: e.target.value});
 
   onFormSubmit = e => {
